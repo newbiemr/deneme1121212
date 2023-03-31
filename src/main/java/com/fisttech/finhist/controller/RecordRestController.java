@@ -21,7 +21,7 @@ public class RecordRestController {
     }
 
     @GetMapping
-    public List<Record> getAll(){
+    public List<Record> getAll() {
         return recordService.gelAll();
     }
 
@@ -29,8 +29,6 @@ public class RecordRestController {
     public String insertTest(/*@Valid */@RequestBody Record record) {
         return recordService.createTest(record);
     }
-
-
 
 
 }

@@ -38,17 +38,15 @@ public class RecordController {
         return recordService.createTest(record);
     }
 
-//    @RequestMapping(value = "/", method = RequestMethod.POST)
+    //    @RequestMapping(value = "/", method = RequestMethod.POST)
     @PostMapping("/ins")
     public ResponseEntity<?> handleForm(@RequestParam("firstName") String firstName,
                                         @RequestParam("firstName") String lastName,
                                         @RequestParam("role") String role) {
 
 
-
         return ResponseEntity.ok().body(firstName);
     }
-
 
 
 //    @GetMapping("")
@@ -57,7 +55,7 @@ public class RecordController {
 //        return "zort";
 //    }
 
-//    @RequestMapping(value = "/", method = RequestMethod.GET)
+    //    @RequestMapping(value = "/", method = RequestMethod.GET)
     @GetMapping("/")
     public String getUsers(Model model) {
         List<UserInfo> users = userService.getUsers();
@@ -66,7 +64,7 @@ public class RecordController {
         return "zort";
     }
 
-//    @RequestMapping(value = "/", method = RequestMethod.POST)
+    //    @RequestMapping(value = "/", method = RequestMethod.POST)
     @PostMapping("/zort")
     public String zo1(Model model, @ModelAttribute UserInfo userInfo) {
         UserInfo user = userService.createUser(userInfo);

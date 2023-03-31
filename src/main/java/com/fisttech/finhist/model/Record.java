@@ -1,13 +1,18 @@
 package com.fisttech.finhist.model;
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @RequiredArgsConstructor
@@ -38,9 +43,6 @@ public class Record {
 
 
     private BigDecimal sumAmount; // olsun. ileriye
-
-
-
 
 
 //    @OneToMany(mappedBy = "link")

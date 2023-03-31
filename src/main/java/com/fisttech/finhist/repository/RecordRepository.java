@@ -1,4 +1,4 @@
-package com.fisttech.finhist.service;
+package com.fisttech.finhist.repository;
 
 import com.fisttech.finhist.model.Record;
 import org.springframework.data.jpa.repository.JpaRepository;

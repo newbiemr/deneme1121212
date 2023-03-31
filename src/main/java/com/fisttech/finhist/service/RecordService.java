@@ -1,6 +1,7 @@
 package com.fisttech.finhist.service;
 
 import com.fisttech.finhist.model.Record;
+import com.fisttech.finhist.repository.RecordRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

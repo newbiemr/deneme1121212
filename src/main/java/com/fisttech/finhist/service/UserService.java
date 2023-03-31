@@ -1,6 +1,6 @@
 package com.fisttech.finhist.service;
 
-import com.fisttech.finhist.UserInfoRepository;
+import com.fisttech.finhist.repository.UserInfoRepository;
 import com.fisttech.finhist.model.UserInfo;
 import org.springframework.stereotype.Service;
 

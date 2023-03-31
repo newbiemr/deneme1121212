@@ -1,4 +1,4 @@
-package com.fisttech.finhist;
+package com.fisttech.finhist.repository;
 
 import com.fisttech.finhist.model.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;

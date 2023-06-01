@@ -1,4 +1,4 @@
-package com.fisttech.finhist.model;
+package com.fisttech.finhist.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,29 +20,28 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @NoArgsConstructor
-public class Record {
+public class Record { // TODO: AuditableEntity?
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-//
-//    @Builder.Default
-//    private boolean active=false;
 
     @NonNull
     private String type;
+
+    private BigDecimal qty;
+
+    private BigDecimal amount;
+
+    private BigDecimal additionalAmount; // // TODO: ?
+
+    private BigDecimal totalAmount; // TODO: ?
 
     @NonNull
     private String description;
 
     private LocalDateTime transactionDate = LocalDateTime.now();
 
-    private BigDecimal qty;
-
-    private BigDecimal amount;
-
-
-    private BigDecimal sumAmount; // olsun. ileriye
 
 
 //    @OneToMany(mappedBy = "link")

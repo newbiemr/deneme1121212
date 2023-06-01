@@ -1,4 +1,4 @@
-package com.fisttech.finhist.model;
+package com.fisttech.finhist.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

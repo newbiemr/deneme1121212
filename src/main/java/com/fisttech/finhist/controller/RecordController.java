@@ -1,7 +1,7 @@
 package com.fisttech.finhist.controller;
 
-import com.fisttech.finhist.model.Record;
-import com.fisttech.finhist.model.UserInfo;
+import com.fisttech.finhist.entity.Record;
+import com.fisttech.finhist.entity.UserInfo;
 import com.fisttech.finhist.service.RecordService;
 import com.fisttech.finhist.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -55,7 +55,6 @@ public class RecordController {
 //        return "zort";
 //    }
 
-    //    @RequestMapping(value = "/", method = RequestMethod.GET)
     @GetMapping("/")
     public String getUsers(Model model) {
         List<UserInfo> users = userService.getUsers();
@@ -64,7 +63,6 @@ public class RecordController {
         return "zort";
     }
 
-    //    @RequestMapping(value = "/", method = RequestMethod.POST)
     @PostMapping("/zort")
     public String zo1(Model model, @ModelAttribute UserInfo userInfo) {
         UserInfo user = userService.createUser(userInfo);

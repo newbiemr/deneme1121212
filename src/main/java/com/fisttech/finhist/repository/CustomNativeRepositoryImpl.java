@@ -20,7 +20,7 @@ public class CustomNativeRepositoryImpl implements CustomNativeRepository {
 
     @Override
     public List<String> runNativeQuery() {
-        return  entityManager.createNativeQuery("select distinct type from record")
+        return entityManager.createNativeQuery("select distinct type from record")
                 .getResultList();
     }
 

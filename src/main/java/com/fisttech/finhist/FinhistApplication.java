@@ -14,10 +14,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 public class FinhistApplication {
 
-	@Bean
-	public AuditorAware<String> auditorAware() {
-		return new AuditorAwareImpl();
-	}
+    @Bean
+    public AuditorAware<String> auditorAware() {
+        return new AuditorAwareImpl();
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(FinhistApplication.class, args);

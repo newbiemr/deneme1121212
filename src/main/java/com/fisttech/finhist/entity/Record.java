@@ -43,7 +43,6 @@ public class Record { // TODO: AuditableEntity?
     private LocalDateTime transactionDate = LocalDateTime.now();
 
 
-
 //    @OneToMany(mappedBy = "link")
 //    private List<Comment> comments = new ArrayList<>();
 

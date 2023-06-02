@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link
+            rel="stylesheet"
+            href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+    />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+    <script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = ">>> " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+
+$(document).ready(function () {
+debugger;
+debugger;
+  $("form").submit(function (event) {
+    var formData = {
+    "physical": false,
+    "type": "GOLD",
+    "quantity": 1,
+    "quantityType": "GRAM",
+    "amount": 120.25,
+    "currency": "TRY",
+    "additionalAmount": 0.01,
+    "totalAmount": 120.30,
+    "description": "fiziksel olmayan, 1 GRAM, 120.25 e almış ama 0.01 de var, bi şeyler daha var, toplamda 120.30 etmiş gibi. 2016'nın 16 martında alınmış gibi kokuyo",
+    "transactionDate": "2016-03-16T13:56:39.492"
+}
+debugger;
+    $.ajax({
+      type: "POST",
+      contentType: "application/json",
+      url: "http://localhost:8080/deneme/item",
+      data: JSON.stringify(formData),
+      dataType: "json",
+    }).done(function (data) {
+      console.log(data); //encode: true,
+    });
+
+
+    event.preventDefault();
+  });
+});
+
+
+    </script>
+
+
+</head>
+<body>
+<p>ddas</p>
+
+
+<p>
+    <button onclick="clickCounter()" type="button">Click me!</button>
+</p>
+<div id="result"></div>
+<p>local storage localstorage </p>
+<!--<p>Click the button to see the counter increase.</p>-->
+<!--<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>-->
+
+<hr>
+<hr>
+
+<div id="zoert">
+    <form action="/deneme/item" method="POST">
+        <div id="name-group" class="form-group">
+            <label for="name">Name</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Full Name"
+            />
+        </div>
+
+        <div id="email-group" class="form-group">
+            <label for="email">Email</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="email@example.com"
+            />
+        </div>
+
+        <div id="superhero-group" class="form-group">
+            <label for="superheroAlias">Superhero Alias</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="superheroAlias"
+                    name="superheroAlias"
+                    placeholder="Ant Man, Wonder Woman, Black Panther, Superman, Black Widow"
+            />
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Submit
+        </button>
+    </form>
+</div>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+

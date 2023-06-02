@@ -16,8 +16,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-//@EntityListeners(AuditingEntityListener.class)
-public class Item extends Auditable<String> {  //extends Auditable {
+public class Item extends Auditable<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

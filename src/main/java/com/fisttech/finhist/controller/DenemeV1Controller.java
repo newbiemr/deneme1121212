@@ -2,6 +2,8 @@ package com.fisttech.finhist.controller;
 
 import com.fisttech.finhist.entity.Record;
 import com.fisttech.finhist.model.ItemModel;
+import com.fisttech.finhist.model.restest.Randorecoruser;
+import com.fisttech.finhist.model.restest.Randuser;
 import com.fisttech.finhist.service.ItemService;
 import com.fisttech.finhist.service.RecordService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,5 +43,13 @@ public class DenemeV1Controller {
         return "ok";
     }
 
+    @GetMapping("/restest")
+    public Randuser test() {
+        return itemService.test();
+    }
+    @GetMapping("/restest2")
+    public Randorecoruser test2() {
+        return itemService.test2();
+    }
 
 }
